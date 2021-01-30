@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Final_Project</title>
+	<style>
+		header{
+			width: 100%;
+			height: 60px;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		.navul{
+			display: inline-block;
+			float: right;
+			padding: 10px;
+		}
+		a{
+			text-decoration: none;
+			color: black;
+			font-weight: bold;
+		}
+		a:hover{
+			color: #132D55;
+			text-decoration: underline;
+		}
+		#logo{
+			margin: 10px;
+			float: left;
+		}
+		#menu_icon{
+			background: #283687;
+			display: hidden;
+			width: 32px;
+			height: 32px;
+		}
+		
+		
+		
+		/*RESPONSIVE RULES*/
+		@media only screen and (max-width: 640px){
+			header{
+				position: absolute;
+			}
+			#menu_icon{
+				display: inline-block;
+			}
+			navbar ul navbar:active ul{
+				display: none;
+				position: absolute;
+				padding: 20px;
+				background: url("menu_icon.jpg");
+				right: 10px;
+				top: 65;
+				width: 35%;
+			}
+			navbar:hover ul{
+				display: block;
+			}
+			navbar li{
+				text-align: center;
+				width: 100%;
+				padding: 15px 0;
+				margin: 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<a href="#home_section" id="logo"><img class="logolila" src="LogoLilablue.png" width="100px"></a>
+		<navbar>
+			<a href="#" id="menu_icon"></a>
+			<ul>
+				<li class="navul"><a href="#home_section">Home</a></li>
+				<li class="navul"><a href="#about_section">About</a></li>
+				<li class="navul"><a href="#contact_section">Contact</a></li>
+			</ul>
+		</navbar>
+	</header>
+	<div class="about">
+	<h2 id="home_section">Home</h2>
+		<h2 id="about_section">A Little About Me</h2>
+		<p>This will be my final project website. I finished class 9, learned how to write HTML and CSS codes and this is my first try in building a website</p>
+		<p>My name is Lila Levy, I a 30 years old, married + 1. I'm the Digital Media Manager at the International Institute for Counter-Terrorism (ICT) and am looking to grow professionally and am thinking of making a carreer change to frontend developer. This is the reason I am takign this course.</p>
+	</div>
+	<div class="container">
+		<h2 id="contct_section">Contact Me</h2>
+		<form action="process.php" method="post">
+			<label for="fname">First Name:</label>
+			<input type="text" id="fname" name="fname" placeholder="First Name">
+			<label for="lname">Last Name:</label>
+			<input type="text" id="lname" name="lname" placeholder="Last Name">
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" placeholder="Email">
+			<label for="country">Country:</label>
+			<select id="country" name="country">
+				<option value="Israel">Israel</option>
+				<option value="USA">USA</option>
+				<option value="Argentina">Argentina</option>
+				<option value="UK">UK</option>
+			</select>
+			<label for="subject">Subject:</label>
+			<textarea id="subject" name="subject" placeholder="Your comments.." style="height: 200px"></textarea>
+			<input type="submit" value="Submit">
+			
+		</form>
+	</div>
+	
+</body>
+</html>
